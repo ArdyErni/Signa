@@ -1,0 +1,196 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\paula\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.8.3
+2 info using node@v24.13.0
+3 silly config load:file:C:\Users\paula\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config load:file:D:\Signa\.npmrc
+5 silly config load:file:C:\Users\paula\.npmrc
+6 silly config load:file:C:\Users\paula\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install" "--cache" "D:\\Signa\\.npm-cache" "--fetch-retries" "0" "--fetch-timeout" "10000" "--no-audit" "--no-fund"
+9 verbose logfile logs-max:10 dir:D:\Signa\.npm-cache\_logs\2026-11-15T19_45_56_750Z-
+10 verbose logfile D:\Signa\.npm-cache\_logs\2026-11-15T19_45_56_750Z-debug-0.log
+11 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest pdfjs-dist@5.4.449
+15 silly packumentCache full:https://registry.npmjs.org/pdfjs-dist cache-miss
+16 http fetch GET https://registry.npmjs.org/pdfjs-dist attempt 1 failed with EACCES
+17 silly fetch manifest pdf-lib@1.17.1
+18 silly packumentCache full:https://registry.npmjs.org/pdf-lib cache-miss
+19 http fetch GET https://registry.npmjs.org/pdf-lib attempt 1 failed with EACCES
+20 silly fetch manifest signature_pad@5.1.4
+21 silly packumentCache full:https://registry.npmjs.org/signature_pad cache-miss
+22 http fetch GET https://registry.npmjs.org/signature_pad attempt 1 failed with EACCES
+23 silly fetch manifest @fontsource/manrope@^5.0.0
+24 silly packumentCache full:https://registry.npmjs.org/@fontsource%2fmanrope cache-miss
+25 http fetch GET https://registry.npmjs.org/@fontsource%2fmanrope attempt 1 failed with EACCES
+26 silly fetch manifest @fontsource/caveat@^5.0.0
+27 silly packumentCache full:https://registry.npmjs.org/@fontsource%2fcaveat cache-miss
+28 http fetch GET https://registry.npmjs.org/@fontsource%2fcaveat attempt 1 failed with EACCES
+29 silly fetch manifest @fontsource/dancing-script@^5.0.0
+30 silly packumentCache full:https://registry.npmjs.org/@fontsource%2fdancing-script cache-miss
+31 http fetch GET https://registry.npmjs.org/@fontsource%2fdancing-script attempt 1 failed with EACCES
+32 silly fetch manifest @fontsource/allura@^5.0.0
+33 silly packumentCache full:https://registry.npmjs.org/@fontsource%2fallura cache-miss
+34 http fetch GET https://registry.npmjs.org/@fontsource%2fallura attempt 1 failed with EACCES
+35 silly fetch manifest vite@7.3.1
+36 silly packumentCache full:https://registry.npmjs.org/vite cache-miss
+37 http fetch GET https://registry.npmjs.org/vite attempt 1 failed with EACCES
+38 silly placeDep ROOT @fontsource/allura@ OK for: signa@1.0.0 want: ^5.0.0
+39 silly placeDep ROOT @fontsource/caveat@ OK for: signa@1.0.0 want: ^5.0.0
+40 silly placeDep ROOT @fontsource/dancing-script@ OK for: signa@1.0.0 want: ^5.0.0
+41 silly placeDep ROOT @fontsource/manrope@ OK for: signa@1.0.0 want: ^5.0.0
+42 silly placeDep ROOT pdf-lib@ OK for: signa@1.0.0 want: 1.17.1
+43 silly placeDep ROOT pdfjs-dist@ REPLACE for: signa@1.0.0 want: 5.4.449
+44 silly placeDep ROOT signature_pad@ OK for: signa@1.0.0 want: 5.1.4
+45 silly placeDep ROOT vite@ REPLACE for: signa@1.0.0 want: 7.3.1
+46 warn ERESOLVE overriding peer dependency {
+46 warn ERESOLVE   code: 'ERESOLVE',
+46 warn ERESOLVE   edge: {
+46 warn ERESOLVE     type: 'peer',
+46 warn ERESOLVE     name: 'vite',
+46 warn ERESOLVE     spec: '^6.4.0 || ^7.0.0 || ^8.0.0',
+46 warn ERESOLVE     from: {
+46 warn ERESOLVE       name: 'vitest',
+46 warn ERESOLVE       version: '5.1.0',
+46 warn ERESOLVE       location: 'node_modules/vitest',
+46 warn ERESOLVE       isWorkspace: false,
+46 warn ERESOLVE       dependents: [Array]
+46 warn ERESOLVE     }
+46 warn ERESOLVE   },
+46 warn ERESOLVE   dep: {
+46 warn ERESOLVE     name: 'vite',
+46 warn ERESOLVE     version: undefined,
+46 warn ERESOLVE     errors: [ [FetchError] ],
+46 warn ERESOLVE     package: {},
+46 warn ERESOLVE     whileInstalling: { name: 'signa', version: '1.0.0', path: 'D:\\Signa' },
+46 warn ERESOLVE     location: 'node_modules/vite',
+46 warn ERESOLVE     isWorkspace: false,
+46 warn ERESOLVE     dependents: [ [Object] ]
+46 warn ERESOLVE   },
+46 warn ERESOLVE   force: false,
+46 warn ERESOLVE   isMine: true,
+46 warn ERESOLVE   strictPeerDeps: false,
+46 warn ERESOLVE   current: {
+46 warn ERESOLVE     name: 'vite',
+46 warn ERESOLVE     version: '8.3.8',
+46 warn ERESOLVE     location: 'node_modules/vite',
+46 warn ERESOLVE     isWorkspace: false,
+46 warn ERESOLVE     dependents: [ [Object], [Object], [Object] ]
+46 warn ERESOLVE   }
+46 warn ERESOLVE }
+47 warn ERESOLVE overriding peer dependency {
+47 warn ERESOLVE   code: 'ERESOLVE',
+47 warn ERESOLVE   edge: {
+47 warn ERESOLVE     type: 'peer',
+47 warn ERESOLVE     name: 'vite',
+47 warn ERESOLVE     spec: '^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0',
+47 warn ERESOLVE     error: 'INVALID',
+47 warn ERESOLVE     from: {
+47 warn ERESOLVE       name: '@vitejs/plugin-react',
+47 warn ERESOLVE       version: '5.1.2',
+47 warn ERESOLVE       location: 'node_modules/@vitejs/plugin-react',
+47 warn ERESOLVE       isWorkspace: false,
+47 warn ERESOLVE       dependents: [Array]
+47 warn ERESOLVE     }
+47 warn ERESOLVE   },
+47 warn ERESOLVE   dep: {
+47 warn ERESOLVE     name: 'vite',
+47 warn ERESOLVE     version: undefined,
+47 warn ERESOLVE     errors: [ [FetchError] ],
+47 warn ERESOLVE     package: {},
+47 warn ERESOLVE     whileInstalling: { name: 'signa', version: '1.0.0', path: 'D:\\Signa' },
+47 warn ERESOLVE     location: 'node_modules/vite',
+47 warn ERESOLVE     isWorkspace: false,
+47 warn ERESOLVE     dependents: [ [Object] ]
+47 warn ERESOLVE   },
+47 warn ERESOLVE   force: false,
+47 warn ERESOLVE   isMine: true,
+47 warn ERESOLVE   strictPeerDeps: false,
+47 warn ERESOLVE   current: {
+47 warn ERESOLVE     name: 'vite',
+47 warn ERESOLVE     version: '8.3.8',
+47 warn ERESOLVE     location: 'node_modules/vite',
+47 warn ERESOLVE     isWorkspace: false,
+47 warn ERESOLVE     dependents: [ [Object], [Object], [Object] ]
+47 warn ERESOLVE   }
+47 warn ERESOLVE }
+48 silly fetch manifest semver@^6.3.1
+49 silly packumentCache full:https://registry.npmjs.org/semver cache-miss
+50 http fetch GET https://registry.npmjs.org/semver attempt 1 failed with EACCES
+51 silly placeDep node_modules/@babel/core semver@ OK for: @babel/core@7.29.13 want: ^6.3.1
+52 silly fetch manifest semver@^6.3.1
+53 silly packumentCache full:https://registry.npmjs.org/semver cache-miss
+54 http fetch GET https://registry.npmjs.org/semver attempt 1 failed with EACCES
+55 silly placeDep node_modules/@babel/helper-compilation-targets semver@ OK for: @babel/helper-compilation-targets@7.29.13 want: ^6.3.1
+56 silly fetch manifest ignore@^7.0.5
+57 silly packumentCache full:https://registry.npmjs.org/ignore cache-miss
+58 http fetch GET https://registry.npmjs.org/ignore attempt 1 failed with EACCES
+59 silly placeDep node_modules/@typescript-eslint/eslint-plugin ignore@ OK for: @typescript-eslint/eslint-plugin@8.59.0 want: ^7.0.5
+60 silly fetch manifest minimatch@^10.2.2
+61 silly packumentCache full:https://registry.npmjs.org/minimatch cache-miss
+62 http fetch GET https://registry.npmjs.org/minimatch attempt 1 failed with EACCES
+63 silly fetch manifest @typescript-eslint/tsconfig-utils@8.59.0
+64 silly packumentCache full:https://registry.npmjs.org/@typescript-eslint%2ftsconfig-utils cache-miss
+65 http fetch GET https://registry.npmjs.org/@typescript-eslint%2ftsconfig-utils attempt 1 failed with EACCES
+66 silly placeDep node_modules/@typescript-eslint/typescript-estree @typescript-eslint/tsconfig-utils@ OK for: @typescript-eslint/typescript-estree@8.59.0 want: 8.59.0
+67 silly placeDep node_modules/@typescript-eslint/typescript-estree minimatch@ OK for: @typescript-eslint/typescript-estree@8.59.0 want: ^10.2.2
+68 silly fetch manifest eslint-visitor-keys@^5.0.0
+69 silly packumentCache full:https://registry.npmjs.org/eslint-visitor-keys cache-miss
+70 http fetch GET https://registry.npmjs.org/eslint-visitor-keys attempt 1 failed with EACCES
+71 silly placeDep node_modules/@typescript-eslint/visitor-keys eslint-visitor-keys@ OK for: @typescript-eslint/visitor-keys@8.59.0 want: ^5.0.0
+72 silly fetch manifest @rolldown/pluginutils@1.0.0-beta.53
+73 silly packumentCache full:https://registry.npmjs.org/@rolldown%2fpluginutils cache-miss
+74 http fetch GET https://registry.npmjs.org/@rolldown%2fpluginutils attempt 1 failed with EACCES
+75 silly placeDep node_modules/@vitejs/plugin-react @rolldown/pluginutils@ OK for: @vitejs/plugin-react@5.1.2 want: 1.0.0-beta.53
+76 silly fetch manifest eslint-visitor-keys@^4.2.1
+77 silly packumentCache full:https://registry.npmjs.org/eslint-visitor-keys cache-miss
+78 http fetch GET https://registry.npmjs.org/eslint-visitor-keys attempt 1 failed with EACCES
+79 silly placeDep node_modules/eslint eslint-visitor-keys@ OK for: eslint@9.39.2 want: ^4.2.1
+80 silly fetch manifest eslint-visitor-keys@^4.2.1
+81 silly packumentCache full:https://registry.npmjs.org/eslint-visitor-keys cache-miss
+82 http fetch GET https://registry.npmjs.org/eslint-visitor-keys attempt 1 failed with EACCES
+83 silly placeDep node_modules/espree eslint-visitor-keys@ OK for: espree@10.4.0 want: ^4.2.1
+84 silly fetch manifest @vitest/mocker@5.1.0
+85 silly packumentCache full:https://registry.npmjs.org/@vitest%2fmocker cache-miss
+86 http fetch GET https://registry.npmjs.org/@vitest%2fmocker attempt 1 failed with EACCES
+87 silly placeDep node_modules/vitest @vitest/mocker@ OK for: vitest@5.1.0 want: 5.1.0
+88 verbose type system
+89 verbose stack FetchError: request to https://registry.npmjs.org/@fontsource%2fallura failed, reason: 
+89 verbose stack     at ClientRequest.<anonymous> (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\node_modules\minipass-fetch\lib\index.js:130:14)
+89 verbose stack     at ClientRequest.emit (node:events:508:28)
+89 verbose stack     at emitErrorEvent (node:_http_client:108:11)
+89 verbose stack     at _destroy (node:_http_client:962:9)
+89 verbose stack     at onSocketNT (node:_http_client:982:5)
+89 verbose stack     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+90 error code EACCES
+91 error errno EACCES
+92 error FetchError: request to https://registry.npmjs.org/@fontsource%2fallura failed, reason: 
+92 error     at ClientRequest.<anonymous> (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\node_modules\minipass-fetch\lib\index.js:130:14)
+92 error     at ClientRequest.emit (node:events:508:28)
+92 error     at emitErrorEvent (node:_http_client:108:11)
+92 error     at _destroy (node:_http_client:962:9)
+92 error     at onSocketNT (node:_http_client:982:5)
+92 error     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+92 error   code: 'EACCES',
+92 error   errno: 'EACCES',
+92 error   type: 'system',
+92 error   requiredBy: '.'
+92 error }
+93 error
+93 error The operation was rejected by your operating system.
+93 error It's possible that the file was already in use (by a text editor or antivirus),
+93 error or that you lack permissions to access it.
+93 error
+93 error If you believe this might be a permissions issue, please double-check the
+93 error permissions of the file and its containing directories, or try running
+93 error the command again as root/Administrator.
+94 silly unfinished npm timer reify 1794771957857
+95 silly unfinished npm timer reify:loadTrees 1794771957863
+96 verbose cwd D:\Signa
+97 verbose os Windows_NT 10.0.26200
+98 verbose node v24.13.0
+99 verbose npm  v10.8.3
+100 verbose exit 1
+101 verbose code 1
+102 error A complete log of this run can be found in: D:\Signa\.npm-cache\_logs\2026-11-15T19_45_56_750Z-debug-0.log

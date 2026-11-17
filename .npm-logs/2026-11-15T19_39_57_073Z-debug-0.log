@@ -1,0 +1,93 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\paula\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.8.3
+2 info using node@v24.13.0
+3 silly config load:file:C:\Users\paula\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config load:file:D:\Signa\.npmrc
+5 silly config load:file:C:\Users\paula\.npmrc
+6 silly config load:file:C:\Users\paula\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install react react-dom pdfjs-dist pdf-lib signature_pad lucide-react @fontsource/manrope @fontsource/caveat @fontsource/dancing-script @fontsource/allura
+8 verbose argv "install" "react" "react-dom" "pdfjs-dist" "pdf-lib" "signature_pad" "lucide-react" "@fontsource/manrope" "@fontsource/caveat" "@fontsource/dancing-script" "@fontsource/allura" "--fetch-retries" "0" "--fetch-timeout" "20000" "--logs-dir" "D:\\Signa\\.npm-logs"
+9 verbose logfile logs-max:10 dir:D:\Signa\.npm-logs\2026-11-15T19_39_57_073Z-
+10 verbose logfile D:\Signa\.npm-logs\2026-11-15T19_39_57_073Z-debug-0.log
+11 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest react@*
+15 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+16 http fetch GET https://registry.npmjs.org/react attempt 1 failed with EACCES
+17 silly fetch manifest react-dom@*
+18 silly packumentCache full:https://registry.npmjs.org/react-dom cache-miss
+19 http fetch GET https://registry.npmjs.org/react-dom attempt 1 failed with EACCES
+20 silly fetch manifest pdfjs-dist@*
+21 silly packumentCache full:https://registry.npmjs.org/pdfjs-dist cache-miss
+22 http fetch GET https://registry.npmjs.org/pdfjs-dist attempt 1 failed with EACCES
+23 silly fetch manifest pdf-lib@*
+24 silly packumentCache full:https://registry.npmjs.org/pdf-lib cache-miss
+25 http fetch GET https://registry.npmjs.org/pdf-lib attempt 1 failed with EACCES
+26 silly fetch manifest signature_pad@*
+27 silly packumentCache full:https://registry.npmjs.org/signature_pad cache-miss
+28 http fetch GET https://registry.npmjs.org/signature_pad attempt 1 failed with EACCES
+29 silly fetch manifest lucide-react@*
+30 silly packumentCache full:https://registry.npmjs.org/lucide-react cache-miss
+31 http fetch GET https://registry.npmjs.org/lucide-react attempt 1 failed with EACCES
+32 silly fetch manifest @fontsource/manrope@*
+33 silly packumentCache full:https://registry.npmjs.org/@fontsource%2fmanrope cache-miss
+34 http fetch GET https://registry.npmjs.org/@fontsource%2fmanrope attempt 1 failed with EACCES
+35 silly fetch manifest @fontsource/caveat@*
+36 silly packumentCache full:https://registry.npmjs.org/@fontsource%2fcaveat cache-miss
+37 http fetch GET https://registry.npmjs.org/@fontsource%2fcaveat attempt 1 failed with EACCES
+38 silly fetch manifest @fontsource/dancing-script@*
+39 silly packumentCache full:https://registry.npmjs.org/@fontsource%2fdancing-script cache-miss
+40 http fetch GET https://registry.npmjs.org/@fontsource%2fdancing-script attempt 1 failed with EACCES
+41 silly fetch manifest @fontsource/allura@*
+42 silly packumentCache full:https://registry.npmjs.org/@fontsource%2fallura cache-miss
+43 http fetch GET https://registry.npmjs.org/@fontsource%2fallura attempt 1 failed with EACCES
+44 silly placeDep ROOT @fontsource/allura@ OK for: signa@1.0.0 want: *
+45 silly placeDep ROOT @fontsource/caveat@ OK for: signa@1.0.0 want: *
+46 silly placeDep ROOT @fontsource/dancing-script@ OK for: signa@1.0.0 want: *
+47 silly placeDep ROOT @fontsource/manrope@ OK for: signa@1.0.0 want: *
+48 silly placeDep ROOT lucide-react@ OK for: signa@1.0.0 want: *
+49 silly placeDep ROOT pdf-lib@ OK for: signa@1.0.0 want: *
+50 silly placeDep ROOT pdfjs-dist@ OK for: signa@1.0.0 want: *
+51 silly placeDep ROOT react@ OK for: signa@1.0.0 want: *
+52 silly placeDep ROOT react-dom@ OK for: signa@1.0.0 want: *
+53 silly placeDep ROOT signature_pad@ OK for: signa@1.0.0 want: *
+54 verbose type system
+55 verbose stack FetchError: request to https://registry.npmjs.org/@fontsource%2fallura failed, reason: 
+55 verbose stack     at ClientRequest.<anonymous> (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\node_modules\minipass-fetch\lib\index.js:130:14)
+55 verbose stack     at ClientRequest.emit (node:events:508:28)
+55 verbose stack     at emitErrorEvent (node:_http_client:108:11)
+55 verbose stack     at _destroy (node:_http_client:962:9)
+55 verbose stack     at onSocketNT (node:_http_client:982:5)
+55 verbose stack     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+56 error code EACCES
+57 error errno EACCES
+58 error FetchError: request to https://registry.npmjs.org/@fontsource%2fallura failed, reason: 
+58 error     at ClientRequest.<anonymous> (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\node_modules\minipass-fetch\lib\index.js:130:14)
+58 error     at ClientRequest.emit (node:events:508:28)
+58 error     at emitErrorEvent (node:_http_client:108:11)
+58 error     at _destroy (node:_http_client:962:9)
+58 error     at onSocketNT (node:_http_client:982:5)
+58 error     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+58 error   code: 'EACCES',
+58 error   errno: 'EACCES',
+58 error   type: 'system',
+58 error   requiredBy: '.'
+58 error }
+59 error
+59 error The operation was rejected by your operating system.
+59 error It's possible that the file was already in use (by a text editor or antivirus),
+59 error or that you lack permissions to access it.
+59 error
+59 error If you believe this might be a permissions issue, please double-check the
+59 error permissions of the file and its containing directories, or try running
+59 error the command again as root/Administrator.
+60 silly unfinished npm timer reify 1794771598144
+61 silly unfinished npm timer reify:loadTrees 1794771598149
+62 verbose cwd D:\Signa
+63 verbose os Windows_NT 10.0.26200
+64 verbose node v24.13.0
+65 verbose npm  v10.8.3
+66 verbose exit 1
+67 verbose code 1
+68 error A complete log of this run can be found in: D:\Signa\.npm-logs\2026-11-15T19_39_57_073Z-debug-0.log

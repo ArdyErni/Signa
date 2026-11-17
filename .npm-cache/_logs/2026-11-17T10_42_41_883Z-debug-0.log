@@ -1,0 +1,143 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\paula\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.8.3
+2 info using node@v24.13.0
+3 silly config load:file:C:\Users\paula\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config load:file:D:\Signa\.qa\ref003-clean\.npmrc
+5 silly config load:file:C:\Users\paula\.npmrc
+6 silly config load:file:D:\Signa\.qa\ref003-clean\etc\npmrc
+7 verbose title npm install vite@7.3.8 typescript-eslint@8.73.0
+8 verbose argv "install" "--prefix" ".qa/ref003-clean" "--package-lock-only" "--save-dev" "--save-exact" "vite@7.3.8" "typescript-eslint@8.73.0" "--cache" ".npm-cache" "--fetch-retries" "0" "--fetch-timeout" "15000" "--strict-peer-deps"
+9 verbose logfile logs-max:10 dir:D:\Signa\.npm-cache\_logs\2026-11-17T10_42_41_883Z-
+10 verbose logfile D:\Signa\.npm-cache\_logs\2026-11-17T10_42_41_883Z-debug-0.log
+11 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest vite@7.3.8
+15 silly packumentCache full:https://registry.npmjs.org/vite cache-miss
+16 http fetch GET https://registry.npmjs.org/vite attempt 1 failed with EACCES
+17 silly fetch manifest typescript-eslint@8.73.0
+18 silly packumentCache full:https://registry.npmjs.org/typescript-eslint cache-miss
+19 http fetch GET https://registry.npmjs.org/typescript-eslint attempt 1 failed with EACCES
+20 silly placeDep ROOT typescript-eslint@ REPLACE for: signa@1.0.0 want: 8.73.0
+21 silly placeDep ROOT vite@ REPLACE for: signa@1.0.0 want: 7.3.8
+22 warn ERESOLVE overriding peer dependency {
+22 warn ERESOLVE   code: 'ERESOLVE',
+22 warn ERESOLVE   edge: {
+22 warn ERESOLVE     type: 'peer',
+22 warn ERESOLVE     name: 'vite',
+22 warn ERESOLVE     spec: '^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0',
+22 warn ERESOLVE     from: {
+22 warn ERESOLVE       name: '@vitejs/plugin-react',
+22 warn ERESOLVE       version: '5.1.2',
+22 warn ERESOLVE       location: 'node_modules/@vitejs/plugin-react',
+22 warn ERESOLVE       isWorkspace: false,
+22 warn ERESOLVE       dependents: [Array]
+22 warn ERESOLVE     }
+22 warn ERESOLVE   },
+22 warn ERESOLVE   dep: {
+22 warn ERESOLVE     name: 'vite',
+22 warn ERESOLVE     version: undefined,
+22 warn ERESOLVE     errors: [ [FetchError] ],
+22 warn ERESOLVE     package: {},
+22 warn ERESOLVE     whileInstalling: {
+22 warn ERESOLVE       name: 'signa',
+22 warn ERESOLVE       version: '1.0.0',
+22 warn ERESOLVE       path: 'D:\\Signa\\.qa\\ref003-clean'
+22 warn ERESOLVE     },
+22 warn ERESOLVE     location: 'node_modules/vite',
+22 warn ERESOLVE     isWorkspace: false,
+22 warn ERESOLVE     dependents: [ [Object] ]
+22 warn ERESOLVE   },
+22 warn ERESOLVE   force: false,
+22 warn ERESOLVE   isMine: true,
+22 warn ERESOLVE   strictPeerDeps: true,
+22 warn ERESOLVE   current: {
+22 warn ERESOLVE     name: 'vite',
+22 warn ERESOLVE     version: '7.3.1',
+22 warn ERESOLVE     location: 'node_modules/vite',
+22 warn ERESOLVE     isWorkspace: false,
+22 warn ERESOLVE     dependents: [ [Object], [Object], [Object], [Object] ]
+22 warn ERESOLVE   }
+22 warn ERESOLVE }
+23 warn ERESOLVE overriding peer dependency {
+23 warn ERESOLVE   code: 'ERESOLVE',
+23 warn ERESOLVE   edge: {
+23 warn ERESOLVE     type: 'peer',
+23 warn ERESOLVE     name: 'vite',
+23 warn ERESOLVE     spec: '^6.4.0 || ^7.0.0 || ^8.0.0',
+23 warn ERESOLVE     from: {
+23 warn ERESOLVE       name: 'vitest',
+23 warn ERESOLVE       version: '5.1.0',
+23 warn ERESOLVE       location: 'node_modules/vitest',
+23 warn ERESOLVE       isWorkspace: false,
+23 warn ERESOLVE       dependents: [Array]
+23 warn ERESOLVE     }
+23 warn ERESOLVE   },
+23 warn ERESOLVE   dep: {
+23 warn ERESOLVE     name: 'vite',
+23 warn ERESOLVE     version: undefined,
+23 warn ERESOLVE     errors: [ [FetchError] ],
+23 warn ERESOLVE     package: {},
+23 warn ERESOLVE     whileInstalling: {
+23 warn ERESOLVE       name: 'signa',
+23 warn ERESOLVE       version: '1.0.0',
+23 warn ERESOLVE       path: 'D:\\Signa\\.qa\\ref003-clean'
+23 warn ERESOLVE     },
+23 warn ERESOLVE     location: 'node_modules/vite',
+23 warn ERESOLVE     isWorkspace: false,
+23 warn ERESOLVE     dependents: [ [Object] ]
+23 warn ERESOLVE   },
+23 warn ERESOLVE   force: false,
+23 warn ERESOLVE   isMine: true,
+23 warn ERESOLVE   strictPeerDeps: true,
+23 warn ERESOLVE   current: {
+23 warn ERESOLVE     name: 'vite',
+23 warn ERESOLVE     version: '7.3.1',
+23 warn ERESOLVE     location: 'node_modules/vite',
+23 warn ERESOLVE     isWorkspace: false,
+23 warn ERESOLVE     dependents: [ [Object], [Object], [Object], [Object] ]
+23 warn ERESOLVE   }
+23 warn ERESOLVE }
+24 silly fetch manifest @vitest/mocker@5.1.0
+25 silly packumentCache full:https://registry.npmjs.org/@vitest%2fmocker cache-miss
+26 http fetch GET https://registry.npmjs.org/@vitest%2fmocker attempt 1 failed with EACCES
+27 silly placeDep node_modules/vitest @vitest/mocker@ OK for: vitest@5.1.0 want: 5.1.0
+28 verbose type system
+29 verbose stack FetchError: request to https://registry.npmjs.org/typescript-eslint failed, reason: 
+29 verbose stack     at ClientRequest.<anonymous> (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\node_modules\minipass-fetch\lib\index.js:130:14)
+29 verbose stack     at ClientRequest.emit (node:events:508:28)
+29 verbose stack     at emitErrorEvent (node:_http_client:108:11)
+29 verbose stack     at _destroy (node:_http_client:962:9)
+29 verbose stack     at onSocketNT (node:_http_client:982:5)
+29 verbose stack     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+30 error code EACCES
+31 error errno EACCES
+32 error FetchError: request to https://registry.npmjs.org/typescript-eslint failed, reason: 
+32 error     at ClientRequest.<anonymous> (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\node_modules\minipass-fetch\lib\index.js:130:14)
+32 error     at ClientRequest.emit (node:events:508:28)
+32 error     at emitErrorEvent (node:_http_client:108:11)
+32 error     at _destroy (node:_http_client:962:9)
+32 error     at onSocketNT (node:_http_client:982:5)
+32 error     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+32 error   code: 'EACCES',
+32 error   errno: 'EACCES',
+32 error   type: 'system',
+32 error   requiredBy: '.'
+32 error }
+33 error
+33 error The operation was rejected by your operating system.
+33 error It's possible that the file was already in use (by a text editor or antivirus),
+33 error or that you lack permissions to access it.
+33 error
+33 error If you believe this might be a permissions issue, please double-check the
+33 error permissions of the file and its containing directories, or try running
+33 error the command again as root/Administrator.
+34 silly unfinished npm timer reify 1794912162847
+35 silly unfinished npm timer reify:loadTrees 1794912162847
+36 verbose cwd D:\Signa
+37 verbose os Windows_NT 10.0.26200
+38 verbose node v24.13.0
+39 verbose npm  v10.8.3
+40 verbose exit 1
+41 verbose code 1
+42 error A complete log of this run can be found in: D:\Signa\.npm-cache\_logs\2026-11-17T10_42_41_883Z-debug-0.log

@@ -1,0 +1,45 @@
+{
+  "name": "signa",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "postinstall": "node scripts/copy-pdf-assets.mjs",
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "check:core": "node scripts/check-core.mjs"
+  },
+  "dependencies": {
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "pdfjs-dist": "5.4.449",
+    "pdf-lib": "1.17.1",
+    "signature_pad": "5.1.4",
+    "lucide-react": "0.546.0",
+    "@fontsource/manrope": "^5.0.0",
+    "@fontsource/caveat": "^5.0.0",
+    "@fontsource/dancing-script": "^5.0.0",
+    "@fontsource/allura": "^5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "vite": "7.3.1",
+    "@vitejs/plugin-react": "5.1.2",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@types/node": "24.12.2",
+    "vitest": "5.1.0",
+    "@playwright/test": "1.59.1",
+    "eslint": "9.39.2",
+    "@eslint/js": "9.39.2",
+    "typescript-eslint": "8.59.0",
+    "eslint-plugin-react-hooks": "7.0.1"
+  }
+}

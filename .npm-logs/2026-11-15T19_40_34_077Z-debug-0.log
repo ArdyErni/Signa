@@ -1,0 +1,72 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\paula\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.8.3
+2 info using node@v24.13.0
+3 silly config load:file:C:\Users\paula\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config load:file:D:\Signa\.npmrc
+5 silly config load:file:C:\Users\paula\.npmrc
+6 silly config load:file:C:\Users\paula\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install typescript@5.9.3 vite@7.3.1 @vitejs/plugin-react@5.1.2 @types/react@19.2.7 @types/react-dom@19.2.3 vitest@5.1.0 @playwright/test@1.59.1 eslint@9.39.2 @eslint/js@9.39.2 typescript-eslint@8.59.0 eslint-plugin-react-hooks@7.0.1 @types/node@24.12.2
+8 verbose argv "install" "--save-dev" "typescript@5.9.3" "vite@7.3.1" "@vitejs/plugin-react@5.1.2" "@types/react@19.2.7" "@types/react-dom@19.2.3" "vitest@5.1.0" "@playwright/test@1.59.1" "eslint@9.39.2" "@eslint/js@9.39.2" "typescript-eslint@8.59.0" "eslint-plugin-react-hooks@7.0.1" "@types/node@24.12.2" "--offline" "--ignore-scripts" "--logs-dir" "D:\\Signa\\.npm-logs" "--no-audit" "--no-fund"
+9 verbose logfile logs-max:10 dir:D:\Signa\.npm-logs\2026-11-15T19_40_34_077Z-
+10 verbose logfile D:\Signa\.npm-logs\2026-11-15T19_40_34_077Z-debug-0.log
+11 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest typescript@5.9.3
+15 silly packumentCache full:https://registry.npmjs.org/typescript cache-miss
+16 silly fetch manifest vite@7.3.1
+17 silly packumentCache full:https://registry.npmjs.org/vite cache-miss
+18 silly fetch manifest @vitejs/plugin-react@5.1.2
+19 silly packumentCache full:https://registry.npmjs.org/@vitejs%2fplugin-react cache-miss
+20 silly fetch manifest @types/react@19.2.7
+21 silly packumentCache full:https://registry.npmjs.org/@types%2freact cache-miss
+22 silly fetch manifest @types/react-dom@19.2.3
+23 silly packumentCache full:https://registry.npmjs.org/@types%2freact-dom cache-miss
+24 silly fetch manifest vitest@5.1.0
+25 silly packumentCache full:https://registry.npmjs.org/vitest cache-miss
+26 silly fetch manifest @playwright/test@1.59.1
+27 silly packumentCache full:https://registry.npmjs.org/@playwright%2ftest cache-miss
+28 silly fetch manifest eslint@9.39.2
+29 silly packumentCache full:https://registry.npmjs.org/eslint cache-miss
+30 silly fetch manifest @eslint/js@9.39.2
+31 silly packumentCache full:https://registry.npmjs.org/@eslint%2fjs cache-miss
+32 silly fetch manifest typescript-eslint@8.59.0
+33 silly packumentCache full:https://registry.npmjs.org/typescript-eslint cache-miss
+34 silly fetch manifest eslint-plugin-react-hooks@7.0.1
+35 silly packumentCache full:https://registry.npmjs.org/eslint-plugin-react-hooks cache-miss
+36 silly fetch manifest @types/node@24.12.2
+37 silly packumentCache full:https://registry.npmjs.org/@types%2fnode cache-miss
+38 silly placeDep ROOT @eslint/js@ OK for: signa@1.0.0 want: 9.39.2
+39 silly placeDep ROOT @playwright/test@ OK for: signa@1.0.0 want: 1.59.1
+40 silly placeDep ROOT @types/node@ OK for: signa@1.0.0 want: 24.12.2
+41 silly placeDep ROOT @types/react@ OK for: signa@1.0.0 want: 19.2.7
+42 silly placeDep ROOT @types/react-dom@ OK for: signa@1.0.0 want: 19.2.3
+43 silly placeDep ROOT @vitejs/plugin-react@ OK for: signa@1.0.0 want: 5.1.2
+44 silly placeDep ROOT eslint@ OK for: signa@1.0.0 want: 9.39.2
+45 silly placeDep ROOT eslint-plugin-react-hooks@ OK for: signa@1.0.0 want: 7.0.1
+46 silly placeDep ROOT typescript@ OK for: signa@1.0.0 want: 5.9.3
+47 silly placeDep ROOT typescript-eslint@ OK for: signa@1.0.0 want: 8.59.0
+48 silly placeDep ROOT vite@ OK for: signa@1.0.0 want: 7.3.1
+49 silly placeDep ROOT vitest@ OK for: signa@1.0.0 want: 5.1.0
+50 verbose stack Error: request to https://registry.npmjs.org/@eslint%2fjs failed: cache mode is 'only-if-cached' but no cached response is available.
+50 verbose stack     at cacheFetch (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\node_modules\make-fetch-happen\lib\cache\index.js:12:13)
+50 verbose stack     at async fetch (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\node_modules\make-fetch-happen\lib\fetch.js:98:7)
+50 verbose stack     at async RegistryFetcher.packument (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\node_modules\pacote\lib\registry.js:90:19)
+50 verbose stack     at async RegistryFetcher.manifest (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\node_modules\pacote\lib\registry.js:128:23)
+50 verbose stack     at async #fetchManifest (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:1199:20)
+50 verbose stack     at async #nodeFromEdge (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:1037:19)
+50 verbose stack     at async #buildDepStep (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:901:11)
+50 verbose stack     at async Arborist.buildIdealTree (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:181:7)
+50 verbose stack     at async Promise.all (index 1)
+50 verbose stack     at async Arborist.reify (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\reify.js:131:5)
+51 error code ENOTCACHED
+52 error request to https://registry.npmjs.org/@eslint%2fjs failed: cache mode is 'only-if-cached' but no cached response is available.
+53 silly unfinished npm timer reify 1794771635252
+54 silly unfinished npm timer reify:loadTrees 1794771635260
+55 verbose cwd D:\Signa
+56 verbose os Windows_NT 10.0.26200
+57 verbose node v24.13.0
+58 verbose npm  v10.8.3
+59 verbose exit 1
+60 verbose code 1
+61 error A complete log of this run can be found in: D:\Signa\.npm-logs\2026-11-15T19_40_34_077Z-debug-0.log

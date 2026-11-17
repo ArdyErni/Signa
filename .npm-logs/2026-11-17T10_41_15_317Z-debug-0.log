@@ -1,0 +1,30 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\paula\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.8.3
+2 info using node@v24.13.0
+3 silly config load:file:C:\Users\paula\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config load:file:D:\Signa\.npmrc
+5 silly config load:file:C:\Users\paula\.npmrc
+6 silly config load:file:C:\Users\paula\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm view vite@7.3.8 version dependencies
+8 verbose argv "view" "vite@7.3.8" "version" "dependencies" "--offline" "--logs-dir" ".npm-logs" "--json"
+9 verbose logfile logs-max:10 dir:D:\Signa\.npm-logs\2026-11-17T10_41_15_317Z-
+10 verbose logfile D:\Signa\.npm-logs\2026-11-17T10_41_15_317Z-debug-0.log
+11 silly logfile done cleaning log files
+12 verbose stack Error: request to https://registry.npmjs.org/vite failed: cache mode is 'only-if-cached' but no cached response is available.
+12 verbose stack     at cacheFetch (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\node_modules\make-fetch-happen\lib\cache\index.js:12:13)
+12 verbose stack     at async fetch (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\node_modules\make-fetch-happen\lib\fetch.js:98:7)
+12 verbose stack     at async RegistryFetcher.packument (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\node_modules\pacote\lib\registry.js:90:19)
+12 verbose stack     at async #getData (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\lib\commands\view.js:135:20)
+12 verbose stack     at async #viewPackage (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\lib\commands\view.js:112:28)
+12 verbose stack     at async View.exec (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\lib\commands\view.js:70:5)
+12 verbose stack     at async Npm.exec (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\lib\npm.js:207:9)
+12 verbose stack     at async module.exports (C:\Users\paula\AppData\Roaming\npm\node_modules\npm\lib\cli\entry.js:74:5)
+13 error code ENOTCACHED
+14 error request to https://registry.npmjs.org/vite failed: cache mode is 'only-if-cached' but no cached response is available.
+15 verbose cwd D:\Signa
+16 verbose os Windows_NT 10.0.26200
+17 verbose node v24.13.0
+18 verbose npm  v10.8.3
+19 verbose exit 1
+20 verbose code 1
+21 error A complete log of this run can be found in: D:\Signa\.npm-logs\2026-11-17T10_41_15_317Z-debug-0.log

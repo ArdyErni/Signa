@@ -1,0 +1,2 @@
+const {createRequire}=require('node:module');const req=createRequire('C:/Users/paula/AppData/Roaming/npm/node_modules/npm/package.json');const shim=req('cmd-shim');const path=require('node:path');
+(async()=>{for(const [name,bin]of [['typescript','tsc'],['eslint','eslint'],['vite','vite'],['vitest','vitest'],['@playwright/test','playwright']]){const pkg=require(path.resolve('node_modules',name,'package.json'));const target=typeof pkg.bin==='string'?pkg.bin:pkg.bin[bin];await shim(path.resolve('node_modules',name,target),path.resolve('node_modules/.bin',bin));}})();
