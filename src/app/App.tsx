@@ -180,7 +180,8 @@ export default function App() {
     setError("");
     const snapshot = placements;
     try {
-      const { exportPdf, signedFilename } = await import("../features/export/export");
+      const { exportPdf, signedFilename } =
+        await import("../features/export/export");
       const bytes = await exportPdf(session, snapshot, assets);
       const url = URL.createObjectURL(
         new Blob([new Uint8Array(bytes)], { type: "application/pdf" }),
@@ -437,12 +438,19 @@ export default function App() {
               </button>
             </div>
           </div>
-          <main className="workspace" ref={workspace} aria-label="PDF editor"
+          <main
+            className="workspace"
+            ref={workspace}
+            aria-label="PDF editor"
             onPointerDown={(event) => {
-              if (event.target instanceof HTMLElement &&
-                  (event.target === event.currentTarget || event.target.classList.contains("page-stage")))
+              if (
+                event.target instanceof HTMLElement &&
+                (event.target === event.currentTarget ||
+                  event.target.classList.contains("page-stage"))
+              )
                 setSelected(null);
-            }}>
+            }}
+          >
             <div className="page-stage">
               <PdfPage
                 key={session.name + session.pdf.fingerprints[0] + ":" + page}
@@ -518,9 +526,6 @@ export default function App() {
           onClose={() => setModal(null)}
         >
           <div className="privacy-content">
-            <div className="privacy-icon">
-              <ShieldCheck size={30} />
-            </div>
             <p>
               Signa processes your PDF and signature entirely in this browser.
               There are no document uploads, accounts, analytics, cookies or
