@@ -2,7 +2,7 @@
 
 A browser-only utility for applying visual electronic signatures to PDFs. React, strict TypeScript, Vite, PDF.js, pdf-lib and signature_pad. No server, accounts, analytics, cookies, document uploads or persistent document/signature storage.
 
-**Status:** v1.0.0 release candidate stabilized locally on 2026-11-17. The owner subsequently reported nine dependency vulnerabilities (one low, seven moderate, one high). Refinement 003 investigated compatible patches, but registry `EACCES` prevented audit retrieval and dependency updates; security remediation and unrestricted release approval remain pending. See [dependency security](docs/DEPENDENCY-SECURITY.md) and [verification](docs/VERIFICATION.md) for actual results and limitations. Nothing has been deployed or published.
+**Status:** v1.0.0 with Refinement 004 verified locally on 2026-11-17: editable export filenames and selected-signature PNG downloads. The requested audit succeeded with elevated registry access and reported zero vulnerabilities in the current lockfile. See [verification](docs/VERIFICATION.md) for results and limitations; [dependency security](docs/DEPENDENCY-SECURITY.md) retains the historical Refinement 003 investigation. Nothing has been deployed or published.
 
 ## Local setup
 
@@ -48,7 +48,8 @@ This was the browser configuration used for the passing stabilization run. No te
 - Independent signatures on multiple pages, selection, pointer capture, proportional corner resizing, duplicate/delete, arrow movement and accessible size controls.
 - Undo/redo (100 committed steps); one pointer gesture is one history operation. Keyboard shortcuts, native modal focus containment/restoration and dirty-document guards.
 - Signature preparation ignores superseded results; drawing survives canvas resizing. Placement gestures are isolated by pointer ID. Unreferenced assets are pruned after they leave current, undo and redo state.
-- Fresh original-byte PDF export for every snapshot, mapped through actual page viewport transforms; new `-signed.pdf` filenames and download-initiation feedback. Errors preserve edits.
+- Fresh original-byte PDF export for every snapshot, mapped through actual page viewport transforms; default `-signed.pdf` filenames or an explicitly chosen export filename. Click the filename/pencil to edit its stem, Enter or click outside to save, Escape to cancel. The `.pdf` suffix stays fixed; unsafe/empty names and stems over 240 UTF-8 bytes are rejected. Errors preserve edits.
+- Selected signatures can be downloaded as `signature.png` using the canonical PNG bytes, preserving asset dimensions and alpha without preview decorations. Filename edits and signature downloads do not change placement history or unsaved-signature state. Uploaded JPEG backgrounds remain part of the canonical image.
 
 ## Architecture
 

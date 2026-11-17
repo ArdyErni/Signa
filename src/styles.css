@@ -255,12 +255,18 @@ footer {
   min-width: 0;
   flex: 1;
 }
-.document-name > span {
+.filename-button > span {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 420px;
 }
+.filename-editor { min-width: 0; max-width: 460px; position: relative; }
+.filename-button { min-width: 0; max-width: 100%; padding: 0 4px; min-height: 44px; border: 0; background: transparent; color: inherit; font: inherit; }
+.filename-button svg, .document-name > svg { flex-shrink: 0; }
+.filename-input { display: flex; align-items: center; gap: 4px; }
+.filename-input input { min-width: 0; width: 100%; padding: 6px; border: 1px solid var(--color-primary); border-radius: 4px; font: inherit; color: var(--color-text); }
+.filename-error { position: absolute; top: 100%; left: 0; z-index: 10; width: min(280px, 75vw); padding: 8px; background: white; border: 1px solid var(--color-border); border-radius: 4px; color: #a32222; }
 .icon-button {
   width: 44px;
   height: 44px;
@@ -373,10 +379,7 @@ footer {
   outline-color: var(--color-primary);
 }
 .placement-tools {
-  position: absolute;
-  bottom: calc(100% + 10px);
-  left: 50%;
-  transform: translateX(-50%);
+  position: fixed;
   background: white;
   box-shadow: 0 3px 14px #0002;
   border: 1px solid var(--color-border);
@@ -384,14 +387,10 @@ footer {
   display: flex;
   z-index: 4;
 }
-.placement-tools.tools-below {
-  bottom: auto;
-  top: calc(100% + 10px);
-}
 .placement-tools button {
-  height: 40px;
-  width: 38px;
-  min-height: 40px;
+  height: 44px;
+  width: 44px;
+  min-height: 44px;
   padding: 0;
   border: 0;
   background: transparent;
@@ -806,7 +805,7 @@ dialog > p {
     justify-content: flex-start;
     border-top: 1px solid var(--color-border);
   }
-  .editor .document-name > span {
+  .editor .filename-editor {
     flex: 1;
     min-width: 0;
     max-width: none;

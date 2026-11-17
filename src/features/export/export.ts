@@ -1,6 +1,7 @@
 import { PDFDocument, degrees, type PDFImage } from "pdf-lib";
 import { imageTransform } from "../../lib/geometry";
 import type { Asset, Placement, Session } from "../../types";
+import { exportFilename } from "./filename";
 export async function exportPdf(
   session: Session,
   placements: Placement[],
@@ -32,5 +33,5 @@ export async function exportPdf(
   return doc.save();
 }
 export function signedFilename(name: string) {
-  return name.replace(/\.pdf$/i, "") + "-signed.pdf";
+  return exportFilename(name, null);
 }

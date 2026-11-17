@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type PointerEvent } from "react";
-import { Copy, Trash2, Minus, Plus } from "lucide-react";
+import { Copy, Trash2, Minus, Plus, Download } from "lucide-react";
+import { PlacementTools } from "./PlacementTools";
 import type { Asset, Placement, Session } from "../types";
 import { bound } from "../lib/geometry";
 export function PdfPage({
@@ -13,6 +14,7 @@ export function PdfPage({
   onChange,
   onDuplicate,
   onDelete,
+  onDownload,
   onError,
 }: {
   session: Session;
@@ -25,6 +27,7 @@ export function PdfPage({
   onChange: (p: Placement) => void;
   onDuplicate: () => void;
   onDelete: () => void;
+  onDownload: (assetId: string) => void;
   onError: (message: string) => void;
 }) {
   const canvas = useRef<HTMLCanvasElement>(null),
@@ -250,10 +253,7 @@ export function PdfPage({
               </button>
               {active && (
                 <>
-                  <div
-                    className={`placement-tools ${p.y * zoom < 56 ? "tools-below" : ""}`}
-                    onPointerDown={(e) => e.stopPropagation()}
-                  >
+                  <PlacementTools>
                     <button
                       title="Smaller signature"
                       aria-label="Smaller signature"
@@ -276,13 +276,20 @@ export function PdfPage({
                       <Copy size={16} />
                     </button>
                     <button
+                      title="Download signature PNG"
+                      aria-label="Download signature PNG"
+                      onClick={() => onDownload(p.assetId)}
+                    >
+                      <Download size={16} />
+                    </button>
+                    <button
                       title="Delete signature"
                       aria-label="Delete signature"
                       onClick={onDelete}
                     >
                       <Trash2 size={16} />
                     </button>
-                  </div>
+                  </PlacementTools>
                   {["nw", "ne", "sw", "se"].map((c) => (
                     <span
                       key={c}

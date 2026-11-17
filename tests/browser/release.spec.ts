@@ -21,7 +21,7 @@ test("download failure retains edits and retries; replacement resets the editor"
   await page.getByRole("button", { name: "Download", exact: true }).click();
   expect((await download).suggestedFilename()).toBe("example-signed.pdf");
   await page.getByLabel("Choose PDF document").setInputFiles({ name: "replacement.pdf", mimeType: "application/pdf", buffer: Buffer.from(await fixture()) });
-  await expect(page.locator(".document-name > span")).toHaveText("replacement.pdf");
+  await expect(page.locator(".filename-button > span")).toHaveText("replacement.pdf");
   await expect(page.getByLabel("Signature placement", { exact: true })).toHaveCount(0);
   await expect(page.getByLabel("Undo", { exact: true })).toBeDisabled();
   await expect(page.getByLabel("Redo", { exact: true })).toBeDisabled();
@@ -38,7 +38,7 @@ test("rejects oversized PDFs without replacing the current session", async ({ pa
   try { await file.truncate(50 * 1024 * 1024 + 1); } finally { await file.close(); }
   await page.getByLabel("Choose PDF document").setInputFiles(path);
   await expect(page.getByRole("alert")).toContainText("50 MiB or smaller");
-  await expect(page.locator(".document-name > span")).toHaveText("example.pdf");
+  await expect(page.locator(".filename-button > span")).toHaveText("example.pdf");
 });
 
 test("UI preview and downloaded marks agree at 20%, normal and maximum zoom", async ({ page }) => {

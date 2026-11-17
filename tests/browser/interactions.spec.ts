@@ -16,7 +16,7 @@ for (const width of [320, 360, 375, 390, 430, 768, 1280])
         add: rect(".add-button"), history: rect(".toolbar-group"), zoom: rect(".zoom-tools"),
         workspace: rect(".workspace"), nav: rect(".page-navigation"),
         zoomBorder: getComputedStyle(document.querySelector(".zoom-tools")!).borderLeftWidth,
-        truncated: (() => { const n = document.querySelector(".document-name > span")!; return n.scrollWidth > n.clientWidth; })(),
+        truncated: (() => { const n = document.querySelector(".filename-button > span")!; return n.scrollWidth > n.clientWidth; })(),
         targets: [...document.querySelectorAll(".header button, .toolbar button, .page-navigation nav button")].map((b) => ({
           width: b.getBoundingClientRect().width, height: b.getBoundingClientRect().height,
         })),

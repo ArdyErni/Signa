@@ -20,11 +20,16 @@ import {
 import { Modal } from "../components/Modal";
 import { SignatureDialog } from "../components/SignatureDialog";
 import { PdfPage } from "../components/PdfPage";
+import { EditableFilename } from "../components/EditableFilename";
+import { exportFilename } from "../features/export/filename";
+import { signatureBlob } from "../features/export/signature";
 import { emptyEditor, editorReducer } from "../features/editor/state";
 import { bound } from "../lib/geometry";
 import type { Asset, Placement, Session } from "../types";
 export default function App() {
   const [session, setSession] = useState<Session | null>(null),
+    [customFilename, setCustomFilename] = useState<string | null>(null),
+    [documentVersion, setDocumentVersion] = useState(0),
     [{ assets, history }, dispatch] = useReducer(editorReducer, emptyEditor),
     [selected, setSelected] = useState<string | null>(null),
     [page, setPage] = useState(0),
@@ -152,6 +157,8 @@ export default function App() {
       const old = sessionRef.current;
       sessionRef.current = next;
       setSession(next);
+      setCustomFilename(null);
+      setDocumentVersion((version) => version + 1);
       dispatch({ type: "reset" });
       setExported("[]");
       setSelected(null);
@@ -180,21 +187,11 @@ export default function App() {
     setError("");
     const snapshot = placements;
     try {
-      const { exportPdf, signedFilename } =
+      const { exportPdf } =
         await import("../features/export/export");
       const bytes = await exportPdf(session, snapshot, assets);
-      const url = URL.createObjectURL(
-        new Blob([new Uint8Array(bytes)], { type: "application/pdf" }),
-      );
-      urls.current.add(url);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = signedFilename(session.name);
-      a.click();
-      setTimeout(() => {
-        URL.revokeObjectURL(url);
-        urls.current.delete(url);
-      }, 30000);
+      downloadBlob(new Blob([new Uint8Array(bytes)], { type: "application/pdf" }),
+        exportFilename(session.name, customFilename));
       setExported(JSON.stringify(snapshot));
       setToast("Download initiated. Your signed copy is ready.");
     } catch (e) {
@@ -203,6 +200,30 @@ export default function App() {
       );
     } finally {
       setExporting(false);
+    }
+  }
+  function downloadBlob(blob: Blob, name: string) {
+    const url = URL.createObjectURL(blob);
+    urls.current.add(url);
+    try {
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = name;
+      a.click();
+    } finally {
+      setTimeout(() => {
+        URL.revokeObjectURL(url);
+        urls.current.delete(url);
+      }, 30000);
+    }
+  }
+  function downloadSignature(assetId: string) {
+    setError("");
+    try {
+      downloadBlob(signatureBlob(assets.get(assetId)), "signature.png");
+      setToast("Signature PNG download initiated.");
+    } catch (e) {
+      setError(`Could not download this signature. ${(e as Error).message}`);
     }
   }
   function add(asset: Asset) {
@@ -261,7 +282,9 @@ export default function App() {
           <>
             <div className="document-name">
               <FileText size={17} />
-              <span title={session.name}>{session.name}</span>
+              <EditableFilename key={documentVersion}
+                name={customFilename ?? session.name} disabled={busy || exporting}
+                onSave={setCustomFilename} />
               <button
                 className="icon-button"
                 aria-label="Replace document"
@@ -464,6 +487,7 @@ export default function App() {
                 onChange={change}
                 onDuplicate={duplicate}
                 onDelete={remove}
+                onDownload={downloadSignature}
                 onError={reportError}
               />
             </div>

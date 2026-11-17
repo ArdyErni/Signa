@@ -1,5 +1,27 @@
 # Release candidate verification — 2026-11-17
 
+## Refinement 004 — current local verification
+
+Implemented editable header export filenames and selected-signature PNG downloads without changes to PDF geometry, source bytes, signature processing, or placement history. Successful document replacement resets the custom filename and its editing state. Default PDF downloads retain `-signed.pdf`; explicit names use the fixed `.pdf` suffix without adding `-signed`. Names are trimmed, limited to 240 UTF-8 bytes, and checked for filesystem characters, reserved Windows names and trailing periods. Overlong input stays editable with actionable feedback.
+
+The selected toolbar retains resize/duplicate/delete and adds a named Lucide download button. Each control is 44 × 44 CSS pixels. Toolbar positioning follows page movement, scrolling and resizing while clamping to the visible workspace. Signature downloads copy canonical PNG bytes directly, with no rasterization/resizing/background addition. Download URLs are revoked after the existing 30-second download grace period or on app cleanup. Failures announce an error without changing placements or their exported revision.
+
+| Check | Refinement 004 result |
+| --- | --- |
+| `npm.cmd run typecheck` | Passed |
+| `npm.cmd run lint` | Passed |
+| `npm.cmd test` | 33 tests passed across 5 files |
+| `npm.cmd run check:core` | 16 checks passed |
+| `npm.cmd run test:e2e -- --workers=2` with `PLAYWRIGHT_CHANNEL=chrome` | Full suite: 48 passed, exit 0 |
+| Final `refinement004.spec.ts` follow-up after adding edge/zoom and immediate-blur coverage | 10 passed, exit 0 (desktop + Pixel 7 emulation) |
+| `npm.cmd run build` | Passed, Vite 7.3.8 |
+| `npm.cmd audit --json` | Initial sandbox request failed; elevated retry succeeded, exit 0, zero reported vulnerabilities (267 dependencies) |
+| `git diff --check` | Passed |
+
+New browser regressions cover filename Enter/Escape/blur validation, explicit/default naming, direct download while editing, replacement reset, unchanged exported PDF bytes across renames, unchanged undo history/dirty state, all three signature sources, byte-identical PNG assets, transparent pixels and original asset dimensions, URL revocation, error feedback and 320px toolbar bounds at page edges and zoom limits. The full existing suite also passed rotated/cropped/UserUnit exports at DPR 1/2 and preview/export coordinate comparisons at zoom extremes.
+
+No dependencies or lockfile changes were needed for this refinement. No fresh dependency installation, physical touch/stylus testing, Safari/Firefox testing, deployment or publishing was performed. Uploaded images retain existing canonical processing; opaque image backgrounds are preserved. Download feedback confirms initiation, not the browser's completed disk save. Earlier results below are historical snapshots.
+
 Signa v1.0.0 stabilization was verified locally on Windows with Node 24.13.0, npm 10.8.3, Vite 7.3.1, PDF.js 5.4.449, pdf-lib 1.17.1, signature_pad 5.1.4 and Playwright 1.59.1. Installed Chrome 157.0.8103.52 ran both desktop and Pixel 7 emulation projects. No deployment or publishing occurred.
 
 The owner reports that their manual functional and UX tests passed, including oversized PDF rejection. The automated results below are separate observations from this stabilization run.

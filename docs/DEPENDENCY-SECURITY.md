@@ -1,5 +1,7 @@
 # Refinement 003: dependency security investigation — 2026-11-17
 
+**Later verification (Refinement 004, 2026-11-17):** `npm.cmd audit --json` succeeded with elevated registry access and returned zero reported vulnerabilities in the current lockfile (267 dependencies). Refinement 004 did not modify dependency declarations or the lockfile. The blocked investigation below describes the earlier checkout snapshot; it does not describe the current audit outcome. See [current verification](VERIFICATION.md).
+
 **Status: remediation blocked; release security acceptance not met.** The owner reported nine npm findings (one low, seven moderate, one high). This session could not retrieve the audit report or install the proposed patches because npm registry requests fail with `EACCES`. Failed audits do not establish zero vulnerabilities, including for production dependencies.
 
 ## Inspected dependency graph
